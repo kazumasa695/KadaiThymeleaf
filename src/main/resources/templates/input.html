@@ -8,10 +8,10 @@
     <h1 th:text="#{content.title}"></h1>
     <h2 th:text="#{content.input}"></h2>
     <p th:text="#{content.nyuryoku}"></p>
-    <p th:if="${previous} != ${null}" th:text="'前回入力された値は「' + ${previous} + '」でした。'">th:if</p>
+    <p th:if="${previous} != ${null}" th:text="#{content.nyuryoku,zenkai1} + ${previous} + #{content.nyuryoku,zenkai2}">th:if</p>
     <form method="post" action="/output">
         <input type="text" name="val">
-        <button type="submit">送信</button>
+        <button type="submit" th:text="#{content.sousin}"></button>
     </form>
 </body>
 </html>
